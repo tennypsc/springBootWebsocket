@@ -1,0 +1,34 @@
+#server
+
+
+#配置mybatis
+mybatis:
+  #配置xml映射路径
+  mapper-locations: classpath:mapper/*.xml
+   #配置实体类的别名
+  type-aliases-package: com.cnksi.pojo
+  configuration:
+    #开启驼峰命名法
+    map-underscore-to-camel-case: true
+    
+
+#配置mysql连接
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3308/sjzx?serverTimezone=UTC
+    username: root
+    password: cnksi.com
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    
+  #配置swagger
+swagger:
+  title: springBootMybatis-WebSocket API接口文档
+  description: WebSocketDemo Api Documentation
+  version: 1.0.0
+  termsOfServiceUrl: https://blog.csdn.net/daoerZ
+  contact:
+    name: daoerZ
+    url: https://blog.csdn.net/daoerZ
+    email: letsgo@qq.com
